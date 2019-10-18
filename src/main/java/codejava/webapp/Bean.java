@@ -22,9 +22,9 @@ public class Bean {
 		{
 			res=78*num;
 			
-		}else if(opt.equalsIgnoreCase("Yen"))
+		}else if(opt.equalsIgnoreCase("Riyal"))
 		{
-			res=184*num;
+			res=18*num;
 		}
 		
 	}
