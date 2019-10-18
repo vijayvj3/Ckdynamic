@@ -10,10 +10,10 @@ class YenTest {
 
 	@Test
 	void test() {
-		Bean bt2=new Bean("Yen",2);
+		Bean bt2=new Bean("Riyal",2);
 		bt2.curr();
 		int res2=bt2.getRes();
-		assertEquals(368,res2);
+		assertEquals(36,res2);
 	}
 
 }
