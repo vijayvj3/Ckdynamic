@@ -22,7 +22,7 @@ public class Controller extends HttpServlet {
 			Bean b=new Bean(opt,n);
 			b.curr();
 			PrintWriter out= resp.getWriter();
-			out.println("<h2 align="center">"+num+" Equivalent Indian Rupee is "+b.getRes()+"</h1>");
+			out.println("<h1 align="center">"+num+" Equivalent Indian Rupee is "+b.getRes()+"</h1>");
 			out.close();			
 		} 
 	}
