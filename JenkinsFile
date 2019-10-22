@@ -44,11 +44,11 @@ pipeline
             deploy adapters: [tomcat9(credentialsId: 'tocat',  url: 'http://3.15.0.139:8088')], contextPath: 'deploy', onFailure: false, war: '**/*.war'        
             }
     }
-    stage("Slack"){
+   /*stage("Slack"){
     steps{
     slackSend baseUrl: 'https://hooks.slack.com/services/', botUser: true, channel: '#training', color: '#439FE0', message: 'Welcome', notifyCommitters: true, teamDomain: 'codekillers-workspace', tokenCredentialId: 'slack-demo', username: 'CK'
     }
-    }
+    }*/
    
       }
 }
