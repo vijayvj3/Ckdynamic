@@ -41,7 +41,7 @@ pipeline
     stage("Slack")
     {
         steps{
-            slackSend channel: '#puppetdemo', message: 'Welcomeee'
+           slackSend channel: '#puppetdemo', message: 'Welcome to slack', notifyCommitters: true, teamDomain: 'https://codekillerss.slack.com/', tokenCredentialId: 'ckslack'
             }
     }
       }
