@@ -41,8 +41,7 @@ pipeline
     stage("Slack")
     {
         steps{
-           slackSend baseUrl: 'https://hooks.slack.com/services/', channel: '#puppetdemo', message: 'Welcome to slack', notifyCommitters: true, teamDomain: 'https://codekillerss.slack.com/', tokenCredentialId: 'slack-demo'
-            }
+slackSend baseUrl: 'https://hooks.slack.com/services/', botUser: true, channel: '#puppetdemo', message: 'Welcome to slack', notifyCommitters: true, teamDomain: 'https://codekillerss.slack.com/', tokenCredentialId: 'slack-demo'            }
     }
       }
 }
