@@ -37,6 +37,11 @@ pipeline
           }   
         }
     }
+    stage('Deploy'){
+      steps{
+      deploy adapters: [tomcat8(credentialsId: 'tocat', path: '', url: 'https://3.17.25.184:8090/')], contextPath: 'Deployy', war: '**/*.war'
+      }
+    }
    
     stage("Slack")
     {
