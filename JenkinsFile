@@ -44,6 +44,7 @@ pipeline
                     sh 'curl -v -u ${username}:${password} -T target/dynamic_new-${BUILD_NUMBER}.war http://3.15.0.139:8088/manager/text/deploy?path=/deployy'
         }
     }
+    }
    }
    post { 
          success { 
