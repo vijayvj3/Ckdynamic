@@ -45,7 +45,7 @@ pipeline
         sh 'curl -v -u ${username}:${password} -T target/dynamic_new{BUILD_NUMBER}.war http://ec2-3-17-25-184.us-east-2.compute.amazonaws.com:8090/manager/text/deploy?path=/Deployy'
       }
     }
-   
+   }
     stage("Slack")
     {
         steps{
