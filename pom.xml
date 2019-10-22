@@ -11,7 +11,8 @@
        <properties>
          <sonar.profile>sonar-scanner.properties</sonar.profile>
        </properties>
-  </profile>
+     </profile>
+</profiles>
 		
 		
   <dependencies>
