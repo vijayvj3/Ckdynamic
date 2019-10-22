@@ -2,8 +2,6 @@ pipeline
 {
     agent any
     
-    
-    
     tools{
     maven 'Maven'
     }
@@ -37,15 +35,7 @@ pipeline
           }   
         }
     }
-    stage('Deploy'){
-      steps{
-     // deploy adapters: [tomcat8(credentialsId: 'tocat', path: '', url: 'https://3.17.25.184:8090/')], contextPath: 'Deployy', war: '**/*.war'
-      withCredentials([usernamePassword(credentialsId: 'tomcatpuppet', passwordVariable: 'pass', usernameVariable: 'userId')]){
-        sh 'curl http://ec2-3-17-25-184.us-east-2.compute.amazonaws.com:8090/manager/text/undeploy?path=/Deployy -u $userId:$pass'
-        sh 'curl -v -u ${username}:${password} -T target/dynamic_new{BUILD_NUMBER}.war http://ec2-3-17-25-184.us-east-2.compute.amazonaws.com:8090/manager/text/deploy?path=/Deployy'
-      }
-    }
-   }
+   
     stage("Slack")
     {
         steps{
