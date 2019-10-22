@@ -16,41 +16,39 @@
 		
   <dependencies>
     <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
-<dependency>
+      <dependency>
             <groupId>org.junit.platform</groupId>
             <artifactId>junit-platform-surefire-provider</artifactId>
             <version>1.1.0</version>
-        </dependency>
-        <dependency>
+       </dependency>
+       <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
             <version>5.1.0</version>
-        </dependency><!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-report-plugin -->
-<dependency>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-surefire-report-plugin</artifactId>
-    <version>3.0.0-M3</version>
-</dependency>
+       </dependency><!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-report-plugin -->
+     <dependency>
+        <groupId>org.apache.maven.plugins</groupId>
+         <artifactId>maven-surefire-report-plugin</artifactId>
+         <version>3.0.0-M3</version>
+     </dependency>
 
 
     
     <!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->
-<dependency>
-    <groupId>javax.servlet</groupId>
-    <artifactId>javax.servlet-api</artifactId>
-    <version>3.1.0</version>
-    <scope>provided</scope>
-</dependency>
+    <dependency>
+       <groupId>javax.servlet</groupId>
+        <artifactId>javax.servlet-api</artifactId>
+         <version>3.1.0</version>
+        <scope>provided</scope>
+     </dependency>
 <!-- https://mvnrepository.com/artifact/javax.servlet/jsp-api -->
-<dependency>
-    <groupId>javax.servlet</groupId>
-    <artifactId>jsp-api</artifactId>
-    <version>2.0</version>
-    <scope>provided</scope>
-</dependency>
-<!-- https://mvnrepository.com/artifact/org.apache.tomcat.maven/tomcat7-maven-plugin -->
-
-  </dependencies>
+    <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>jsp-api</artifactId>
+        <version>2.0</version>
+        <scope>provided</scope>
+     </dependency>
+ </dependencies>
   
   <build>
     <testSourceDirectory>src/main/test</testSourceDirectory>
