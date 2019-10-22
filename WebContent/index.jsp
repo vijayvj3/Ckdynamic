@@ -4,9 +4,8 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Currency Convertor</title>
 <style type=text/css>
-
 input[name="num"] {
   width: 100%;
   padding: 14px 20px;
@@ -35,32 +34,22 @@ input[type=button] {
 input[type="submit"]:hover,input[type="reset"]:hover, input[type="button"]:hover {
   opacity: 0.6;
 }
-
 div {
 	align: center;
 }
 </style>
-
 </head>
 <body>
-	<div>
-	<form action ="controller"  method="post">
+<div class="bg-text" align="center">
+	<form action ="controller" name="loginForm" method="post">
 			<table>
-			
-           <tr><td> <h1> Currency Converter</h1></td></tr>
-			
-			 <tr><td> <select name  ="Currency">
-			<option selected>Dollar</option>
-			<option> Euro </option>
-			<option> Riyal </option>
-			</select> </td></tr>
-				<tr><td ><input type="number" size=25  placeholder="Enter dollar Value" name="num" required/></td></tr>
-				<tr><td>
-				<tr><td><input type="submit"  value="check" name="bookButton"  > <input type="Reset"></td></tr>
+			<h1> Currency Convertor</h1>
+				<tr><td align="center"><input type="number" size=25  placeholder="Enter dollar Value" name="num" required/></td></tr>
+				<tr><td align="center">
+				<tr><td align="center"><input type="submit"  value="check" name="bookButton"  > <input type="Reset"></td></tr>
 			</table>
 			<br>
 	</form>
 </div>
-		</body>
-
+</body>
 </html>
