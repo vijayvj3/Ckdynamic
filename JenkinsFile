@@ -45,7 +45,9 @@ pipeline
             }
     }
     stage("Slack"){
+    steps{
     slackSend baseUrl: 'https://hooks.slack.com/services/', botUser: true, channel: '#training', color: '#439FE0', message: 'Welcome', notifyCommitters: true, teamDomain: 'codekillers-workspace', tokenCredentialId: 'slack-demo', username: 'CK'
+    }
     }
    
       }
