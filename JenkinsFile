@@ -53,6 +53,14 @@ pipeline
             }
             
         }
+         stage('Running Command in PuppetNode'){
+            steps{
+                withCredentials([string(credentialsId: 'padmin_password', variable: 'puppet_pwd')]){
+                sh 'sshpass -p ${puppet_pwd} ssh -v -o StrictHostKeyChecking=no ansadmin@3.14.7.30 -C \"sudo /opt/puppetlabs/bin/puppet agent -t"'
+                }
+            }
+            
+        }
    }
    post { 
          success { 
