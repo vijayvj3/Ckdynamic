@@ -42,9 +42,17 @@ pipeline
              withCredentials([usernamePassword(credentialsId: 'TOMCAT_CK', passwordVariable: 'password', usernameVariable: 'username')]){
                     sh 'curl http://3.15.0.139:8088/manager/text/undeploy?path=/deployy -u ${username}:${password}'
                     sh 'curl -v -u ${username}:${password} -T target/dynamic_new-${BUILD_NUMBER}.war http://3.15.0.139:8088/manager/text/deploy?path=/deployy'
+               }
+            }
+     }
+      stage('Uploading manifest to PuppetMaster'){
+            steps{
+                withCredentials([string(credentialsId: 'padmin_password', variable: 'puppet_pwd')]){
+                sh 'sshpass -p ${puppet_pwd} scp -v site.pp padmin@18.217.102.0:/etc/puppetlabs/code/environment/production/manifest/'
+                }
+            }
+            
         }
-    }
-    }
    }
    post { 
          success { 
