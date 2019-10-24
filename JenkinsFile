@@ -57,7 +57,8 @@ pipeline
             steps{
                 withCredentials([string(credentialsId: 'padmin_password', variable: 'puppet_pwd')]){
                 sh 'sshpass -p ${puppet_pwd} ssh -v -o StrictHostKeyChecking=no padmin@3.14.7.30 -C \"sudo /opt/puppetlabs/bin/puppet agent -t"'
-                
+                 sh 'sshpass -p ${puppet_pwd} ssh -v -o StrictHostKeyChecking=no padmin@3.14.7.30 -C \"true"'
+              
                 }
             }
             
