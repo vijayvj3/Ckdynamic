@@ -40,7 +40,7 @@ pipeline
       stage('Uploading manifest to PuppetMaster'){
             steps{
                 withCredentials([string(credentialsId: 'padmin_password', variable: 'puppet_pwd')]){
-                sh 'sshpass -p ${puppet_pwd} scp -v -o StrictHostKeyChecking=no site.pp padmin@18.224.184.122:/etc/puppetlabs/code/environments/production/manifests/'
+                sh 'sshpass -p ${puppet_pwd} scp -v  site.pp padmin@18.224.184.122:/etc/puppetlabs/code/environments/production/manifests/'
                 }
             }
             
@@ -48,8 +48,8 @@ pipeline
          stage('Running Command in PuppetNode'){
             steps{
                 withCredentials([string(credentialsId: 'padmin_password', variable: 'puppet_pwd')]){
-                sh 'sshpass -p ${puppet_pwd} ssh -v -o StrictHostKeyChecking=no padmin@3.19.65.223 -C \"sudo /opt/puppetlabs/bin/puppet agent -t"'
-                sh 'sshpass -p ${puppet_pwd} ssh -v -o StrictHostKeyChecking=no padmin@3.19.65.223 -C \"true"'
+                sh 'sshpass -p ${puppet_pwd} ssh -v  padmin@3.19.65.223 -C \"sudo /opt/puppetlabs/bin/puppet agent -t"'
+                sh 'sshpass -p ${puppet_pwd} ssh -v  padmin@3.19.65.223 -C \"true"'
                 
                 }
             }
