@@ -63,7 +63,7 @@ pipeline
             }
          failure {
             echo 'notified to slack'
-            slackSend  channel: '#puppetdemo', color: '#00FF00', message: ' JOB FAILURE: Job \'${JOB_NAME} [${BUILD_NUMBER}]\' (${BUILD_URL})', teamDomain: 'codekillerss', tokenCredentialId: 'demooo'
+            slackSend  baseUrl: 'https://app.slack.com/', channel: '#puppetdemo', color: '#00FF00', message: ' JOB FAILURE: Job '${JOB_NAME} [${BUILD_NUMBER}]' (${BUILD_URL})', teamDomain: 'codekillerss', tokenCredentialId: 'demooo'
          }
     }
       }
