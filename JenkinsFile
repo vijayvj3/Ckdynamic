@@ -35,6 +35,8 @@ pipeline
           }   
         }
         
+        
+        
     }
    
       stage('Uploading manifest to PuppetMaster'){
