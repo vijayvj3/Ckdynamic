@@ -42,7 +42,7 @@ pipeline
       stage('Uploading manifest to PuppetMaster'){
             steps{
                 withCredentials([string(credentialsId: 'padmin_password', variable: 'puppet_pwd')]){
-                sh 'sshpass -p ${puppet_pwd} scp -v  site.pp ansi@3.133.82.50:/etc/'
+                sh 'sshpass -p ${puppet_pwd} scp -v site.pp padmin@18.224.184.122:/etc/puppetlabs/code/environments/production/manifests/'
                 }
             }
             
