@@ -1,0 +1,24 @@
+pipeline
+{
+    agent any
+    
+    tools{
+    maven 'Maven'
+    }
+    
+   stages{
+    stage('Build')
+        {
+            steps{
+              sh 'mvn clean install'
+                 }
+         }
+          stage('Performance Test'){
+            steps{
+            blazeMeterTest credentialsId: 'Blaze_cred', getJtl: true, getJunit: true, mainTestFile: 'script.yml', testId: '7418760.taurus', workspaceId: '389400'
+            }
+        
+        
+        }
+        }
+ }
