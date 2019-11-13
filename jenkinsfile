@@ -17,8 +17,7 @@ pipeline
          def userInput= input(id: 'userInput', message: 'Job A failed, do u want to build jobB?' , ok:'Yes')*/
     stage('functional test'){
     steps{
-blazeMeterTest credentialsId: 'blaze', getJunit: true, testId: '7420196.functionalApi', workspaceId: '389400'    }
-    
+blazeMeterTest abortJob: true, credentialsId: 'blaze', getJtl: true, getJunit: true, testId: '7421211.functionalApi', workspaceId: '389930'    
     }
          stage('Performance Test'){
             steps{
