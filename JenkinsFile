@@ -59,8 +59,8 @@ pipeline
         }
         stage('Performance Test'){
             steps{
-            blazeMeterTest credentialsId: 'Blaze_cred', getJtl: true, getJunit: true, mainTestFile: 'script.yml', testId: '7418760.taurus', workspaceId: '389400'
-            }
+blazeMeterTest credentialsId: 'blaze', getJunit: true, testId: '7418760.taurus', workspaceId: '389400'
+}
         
         
         }
