@@ -23,6 +23,7 @@ blazeMeterTest abortJob: true, credentialsId: 'blaze', getJtl: true, getJunit: t
             steps{
 blazeMeterTest abortJob: true, credentialsId: 'blaze', getJtl: true, getJunit: true, testId: '7421180.taurus', workspaceId: '389930'
 }
+}
         stage('Deploy'){
          steps{
          echo 'Deploy stage'
