@@ -13,11 +13,11 @@ pipeline
               sh 'mvn clean install'
                  }
          }
-         /*mail (to: 'kavitharamamoorthy97@gmail.com', subject: "checking", body: "please go to the console o/p");
-         def userInput= input(id: 'userInput', message: 'Job A failed, do u want to build jobB?' , ok:'Yes')*/
+         
     stage('functional test'){
     steps{
 blazeMeterTest abortJob: true, credentialsId: 'blaze', getJtl: true, getJunit: true, testId: '7421211.functionalApi', workspaceId: '389930'    
+    }
     }
          stage('Performance Test'){
             steps{
@@ -26,4 +26,5 @@ blazeMeterTest abortJob: true, credentialsId: 'blaze', getJtl: true, getJunit: t
         
         }
    }
+ }
  }
