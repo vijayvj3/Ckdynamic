@@ -9,4 +9,4 @@ scenarios:
     requests:
     - label: blazedemo
       method: GET
-      url: http://blazedemo.com/
+      url:https://www.espncricinfo.com/
