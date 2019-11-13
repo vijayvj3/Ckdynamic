@@ -21,7 +21,7 @@ blazeMeterTest abortJob: true, credentialsId: 'blaze', getJtl: true, getJunit: t
     }
          stage('Performance Test'){
             steps{
-blazeMeterTest abortJob: true, credentialsId: 'blaze', getJtl: true, getJunit: true, testId: '7421180.taurus', workspaceId: '389930'
+blazeMeterTest abortPipeline: true, credentialsId: 'blaze', getJtl: true, getJunit: true, testId: '7421180.taurus', workspaceId: '389930'
 }
 }
         stage('Deploy'){
