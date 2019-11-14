@@ -16,7 +16,7 @@ pipeline
          
     stage('functional test'){
     steps{
-blazeMeterTest abortJob: true, credentialsId: 'blaze', getJtl: true, getJunit: true, testId: '7422616.functionalApi', workspaceId: '390147'
+blazeMeterTest abortJob: true, credentialsId: 'blaze', getJtl: true, getJunit: true, testId: '7425335.functionalGui', workspaceId: '390578'
 }
     }
          stage('Performance Test'){
