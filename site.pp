@@ -6,4 +6,6 @@ wget::fetch { "Downloading war from nexus":
   destination => '/home/padmin/apache-tomcat-9.0.27/webapps/',
   timeout     => 5,
   verbose     => true,
+  
+  
 }
