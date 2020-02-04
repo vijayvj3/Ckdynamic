@@ -1,0 +1,24 @@
+pipeline
+{
+    agent any
+    
+    tools{
+    maven 'Maven'
+    }
+    
+   stages{
+    stage('Build')
+        {
+            steps{
+              sh 'mvn clean install'
+                 }
+         }
+    stage('nexus')
+     {
+     steps{
+       nexus_artifact()
+       }
+       }
+       }
+       }
+    
