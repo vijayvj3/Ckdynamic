@@ -13,7 +13,7 @@ pipeline
               sh 'mvn clean install'
                  }
          }
-         stage('SonarQube analysis') {
+        /* stage('SonarQube analysis') {
        steps{
         withSonarQubeEnv('SonarQube') {
             sh 'mvn sonar:sonar -Pprofile1'
@@ -73,7 +73,7 @@ blazeMeterTest credentialsId: 'blaze', getJunit: true, testId: '7418760.taurus',
          failure {
             echo 'notified to slack'
             slackSend  channel: '#puppetdemo', color: '#FF0000', message: "JOB FAILURE: Job '${JOB_NAME} [${BUILD_NUMBER}]' (${BUILD_URL})", teamDomain: 'codekillerss', tokenCredentialId: 'demooo'
-         }
+         }*/
     }
       }
 
