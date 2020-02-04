@@ -18,7 +18,7 @@ pipeline
     {
      steps{
           withCredentials([usernamePassword(credentialsId: 'nexus_cred', passwordVariable: 'pass', usernameVariable: 'userId')]) {
-            sh   'curl -F file=@target/dynamic_new-${BUILD_NUMBER}.war -u $userId:$pass http://3.15.18.214:8081/nexus/content/repositories/repo/dynamic_new-${BUILD_NUMBER}.war'
+            sh   'curl -F file=@target/dynamic_new-${BUILD_NUMBER}.war -u $userId:$pass http://3.15.18.214:8081/nexus/content/repositories/repo/ck/dynamic_new-${BUILD_NUMBER}.war'
           }   
         }
         }
