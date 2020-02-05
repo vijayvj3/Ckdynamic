@@ -1,3 +1,4 @@
+Library ('shlib1')_
 pipeline
 {
     agent any
