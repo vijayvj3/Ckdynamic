@@ -25,7 +25,7 @@ pipeline
     stage('nexus')
      {
      steps{
-       nexus_artifact()
+       nexus_artifact_fetch()
        }
        }
        }
