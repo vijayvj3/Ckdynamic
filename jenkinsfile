@@ -7,7 +7,7 @@ pipeline
     }
     
    stages{
-    stage('Build')
+  /*  stage('Nexus')
         {
             steps{
               sh 'mvn clean install'
@@ -23,10 +23,11 @@ blazeMeterTest abortJob: true, credentialsId: 'blaze', getJtl: true, getJunit: t
             steps{
 blazeMeterTest abortJob: true, credentialsId: 'blaze', getJtl: true, getJunit: true, testId: '7425356.taurus', workspaceId: '390578'
 }
-}
-        stage('Deploy'){
+}*/
+        stage('Nexus'){
          steps{
-         echo 'Deploy stage'
+        mvn deploy:deploy-file -DgroupId=Codekillers -DartifactId=dynamic_new -Dversion=1.0 -DgeneratePom=true -Dpackaging=war -DrepositoryId=nexus 
+        -Durl=http://http://3.15.18.214:8081/nexus/nexus/content/repositories/releases -Dfile=target/dynamic_new-1.0.war
          
          }
         }
