@@ -1,3 +1,4 @@
+@Library('shlib1')_
 pipeline
 {
     agent any
@@ -27,7 +28,7 @@ blazeMeterTest abortJob: true, credentialsId: 'blaze', getJtl: true, getJunit: t
         stage('Nexus'){
          steps{
         mvn deploy:deploy-file -DgroupId=Codekillers -DartifactId=dynamic_new -Dversion=1.0 -DgeneratePom=true -Dpackaging=war -DrepositoryId=nexus 
-        -Durl=http://http://3.15.18.214:8081/nexus/content/repositories/releases -Dfile=target/dynamic_new-1.0.war
+        -Durl=http://3.15.18.214:8081/nexus/content/repositories/releases -Dfile=target/dynamic_new-1.0.war
          
          }
         }
