@@ -18,8 +18,8 @@ pipeline
   
         stage('Nexus'){
        steps{
-    sh ' curl -v -F r=repo -F hasPom=true -F e=war -F file=@pom.xml -F file=@dynamic_new-1.0.war -u admin:admin123 "http://3.15.18.214:8081/nexus/service/local/artifact/maven/content" '
-         
+  //  sh ' curl -v -F r=repo -F hasPom=true -F e=war -F file=@pom.xml -F file=@dynamic_new-1.0.war -u admin:admin123 "http://3.15.18.214:8081/nexus/service/local/artifact/maven/content" '
+        curl  -X GET -u admin:admin123 "http://3.15.18.214:8081/nexus/service/local/artifact/maven/resolve?r=central&g=org.testng&a=testng&v=LATEST" 
         }
         }
         
