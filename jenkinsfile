@@ -21,7 +21,7 @@ pipeline
  sh ' curl -v -F r=repo -F hasPom=true -F e=war -F file=@pom.xml -F file=@dynamic_new-1.0.war -u admin:admin123 "http://3.15.18.214:8081/nexus/service/local/artifact/maven/content" '
        // curl  -X GET -u admin:admin123 "http://3.15.18.214:8081/nexus/service/local/artifact/maven/resolve?r=central&g=org.testng&a=testng&v=LATEST" 
      // sh ' curl  -X GET -u admin:admin123 "http://3.15.18.214:8081/nexus/service/local/artifact/maven/resolve?r=repo&g=Codekillers&a=dynamic_new&v=1.0" '
-wget "http://repository.sonatype.org/service/local/artifact/maven/redirect?r=repo&g=Codekillers&a=dynamic_new&v=1.0"
+sh 'wget "http://repository.sonatype.org/service/local/artifact/maven/redirect?r=repo&g=Codekillers&a=dynamic_new&v=1.0" '
         }
         
         }
